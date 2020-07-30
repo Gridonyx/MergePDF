@@ -44,7 +44,7 @@
             this.dragNdrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dragNdrop.FormattingEnabled = true;
-            this.dragNdrop.Location = new System.Drawing.Point(12, 102);
+            this.dragNdrop.Location = new System.Drawing.Point(12, 83);
             this.dragNdrop.Name = "dragNdrop";
             this.dragNdrop.Size = new System.Drawing.Size(407, 186);
             this.dragNdrop.Sorted = true;
@@ -54,22 +54,22 @@
             // 
             // lblDragNDrop
             // 
-            this.lblDragNDrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblDragNDrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDragNDrop.AutoSize = true;
             this.lblDragNDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDragNDrop.Location = new System.Drawing.Point(74, 60);
+            this.lblDragNDrop.Location = new System.Drawing.Point(12, 61);
             this.lblDragNDrop.Name = "lblDragNDrop";
-            this.lblDragNDrop.Size = new System.Drawing.Size(282, 20);
+            this.lblDragNDrop.Size = new System.Drawing.Size(407, 20);
             this.lblDragNDrop.TabIndex = 1;
-            this.lblDragNDrop.Text = "...or Drag and Drop into the area below";
+            this.lblDragNDrop.Text = "...or Drag and Drop below";
+            this.lblDragNDrop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOpenFiles
             // 
             this.btnOpenFiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpenFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpenFiles.Location = new System.Drawing.Point(147, 20);
+            this.btnOpenFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenFiles.Location = new System.Drawing.Point(12, 16);
             this.btnOpenFiles.Name = "btnOpenFiles";
             this.btnOpenFiles.Size = new System.Drawing.Size(130, 32);
             this.btnOpenFiles.TabIndex = 2;
@@ -85,14 +85,14 @@
             // 
             // btnMerge
             // 
-            this.btnMerge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMerge.Location = new System.Drawing.Point(71, 20);
+            this.btnMerge.Enabled = false;
+            this.btnMerge.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMerge.Location = new System.Drawing.Point(152, 16);
             this.btnMerge.Name = "btnMerge";
             this.btnMerge.Size = new System.Drawing.Size(130, 32);
             this.btnMerge.TabIndex = 3;
             this.btnMerge.Text = "Merge";
             this.btnMerge.UseVisualStyleBackColor = true;
-            this.btnMerge.Visible = false;
             this.btnMerge.Click += new System.EventHandler(this.btnMerge_Click);
             // 
             // saveFile
@@ -102,21 +102,21 @@
             // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(227, 20);
+            this.btnReset.Enabled = false;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(289, 16);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(130, 32);
             this.btnReset.TabIndex = 4;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Visible = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // MergePDF_Win
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 306);
+            this.ClientSize = new System.Drawing.Size(431, 287);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.btnOpenFiles);
@@ -127,7 +127,6 @@
             this.Name = "MergePDF_Win";
             this.Text = "MergePDF";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

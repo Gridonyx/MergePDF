@@ -34,10 +34,7 @@ namespace MergePDF
 
                         if (dragNdrop.Items.Count >= 2)
                         {
-                            btnOpenFiles.Visible = false;
-                            lblDragNDrop.Visible = false;
-                            btnMerge.Visible = true;
-                            btnReset.Visible = true;
+                            HandleUI(true, false);
                         }
                     }
                 }
@@ -59,19 +56,12 @@ namespace MergePDF
 
             if (dragNdrop.Items.Count >= 2)
             {
-                btnOpenFiles.Visible = false;
-                lblDragNDrop.Visible = false;
-                btnMerge.Visible = true;
-                btnReset.Visible = true;
+                HandleUI(true, false);
             }
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
-            btnMerge.Visible = false;
-            btnReset.Visible = false;
-            btnOpenFiles.Visible = true;
-            lblDragNDrop.Visible = true;
-            dragNdrop.Items.Clear();
+            HandleUI(false, true);
         }
 
         private void btnMerge_Click(object sender, EventArgs e)
@@ -106,6 +96,24 @@ namespace MergePDF
             }
         }
 
+        private void HandleUI(bool enableButtons, bool reset)
+        {
+            if (enableButtons)
+            {
+                btnMerge.Enabled = true;
+                btnReset.Enabled = true;
+            }
+            else
+            {
+                btnMerge.Enabled = false;
+                btnReset.Enabled = false;
+            }
+
+            if (reset)
+            {
+                dragNdrop.Items.Clear();
+            }
+        }
         
     }
 }
