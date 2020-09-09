@@ -36,6 +36,7 @@
             this.btnMerge = new System.Windows.Forms.Button();
             this.saveFile = new System.Windows.Forms.SaveFileDialog();
             this.btnReset = new System.Windows.Forms.Button();
+            this.cbOpenAfterSaving = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // dragNdrop
@@ -44,7 +45,7 @@
             this.dragNdrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dragNdrop.FormattingEnabled = true;
-            this.dragNdrop.Location = new System.Drawing.Point(12, 83);
+            this.dragNdrop.Location = new System.Drawing.Point(12, 111);
             this.dragNdrop.Name = "dragNdrop";
             this.dragNdrop.Size = new System.Drawing.Size(407, 186);
             this.dragNdrop.Sorted = true;
@@ -56,8 +57,8 @@
             // 
             this.lblDragNDrop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDragNDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDragNDrop.Location = new System.Drawing.Point(12, 61);
+            this.lblDragNDrop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDragNDrop.Location = new System.Drawing.Point(12, 89);
             this.lblDragNDrop.Name = "lblDragNDrop";
             this.lblDragNDrop.Size = new System.Drawing.Size(407, 20);
             this.lblDragNDrop.TabIndex = 1;
@@ -112,11 +113,23 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // cbOpenAfterSaving
+            // 
+            this.cbOpenAfterSaving.AutoSize = true;
+            this.cbOpenAfterSaving.Enabled = false;
+            this.cbOpenAfterSaving.Location = new System.Drawing.Point(151, 53);
+            this.cbOpenAfterSaving.Name = "cbOpenAfterSaving";
+            this.cbOpenAfterSaving.Size = new System.Drawing.Size(139, 17);
+            this.cbOpenAfterSaving.TabIndex = 5;
+            this.cbOpenAfterSaving.Text = "Open folder after saving";
+            this.cbOpenAfterSaving.UseVisualStyleBackColor = true;
+            // 
             // MergePDF_Win
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 287);
+            this.ClientSize = new System.Drawing.Size(431, 315);
+            this.Controls.Add(this.cbOpenAfterSaving);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnMerge);
             this.Controls.Add(this.btnOpenFiles);
@@ -127,6 +140,7 @@
             this.Name = "MergePDF_Win";
             this.Text = "MergePDF";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -139,6 +153,7 @@
         private System.Windows.Forms.Button btnMerge;
         private System.Windows.Forms.SaveFileDialog saveFile;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.CheckBox cbOpenAfterSaving;
     }
 }
 

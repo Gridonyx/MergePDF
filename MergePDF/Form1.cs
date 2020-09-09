@@ -85,6 +85,11 @@ namespace MergePDF
 
                     outputPDF.Save(filepath);
                 }
+
+                if (cbOpenAfterSaving.Checked)
+                {
+                    System.Diagnostics.Process.Start(Path.GetDirectoryName(saveFile.FileName));
+                }
             }
         }
 
@@ -102,11 +107,13 @@ namespace MergePDF
             {
                 btnMerge.Enabled = true;
                 btnReset.Enabled = true;
+                cbOpenAfterSaving.Enabled = true;
             }
             else
             {
                 btnMerge.Enabled = false;
                 btnReset.Enabled = false;
+                cbOpenAfterSaving.Enabled = false;
             }
 
             if (reset)
