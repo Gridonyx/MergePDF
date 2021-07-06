@@ -1,4 +1,5 @@
 # MergePDF
+[![CodeQL](https://github.com/Gridonyx/MergePDF/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/Gridonyx/MergePDF/actions/workflows/codeql-analysis.yml)
 
 A simple program to merge multiple PDF files.
 
